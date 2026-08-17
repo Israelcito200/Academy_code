@@ -3,77 +3,360 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Academia Código — Curso Full-Stack</title>
-    <meta name="description" content="Curso Full-Stack: aprende HTML, JavaScript, Node.js y despliegue en 12 semanas.">
+    <title>Academia Código — Curso Full-Stack: De 0 a Despliegue</title>
+    <meta name="description" content="Fórmate como desarrollador Full-Stack en 12 semanas: HTML, CSS, JavaScript, Node.js, bases de datos y despliegue. Mentoría 1:1, proyectos reales y bolsa de empleo.">
+    <link rel="icon" href="img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <header>
-      <div>
-        <a href="index.html"><img src="img/logo.png" alt="Academia Código" width="140"></a>
-        <nav aria-label="Navegación principal">
-          <a href="index.html">Inicios</a> |
-          <a href="products.html">Curso</a> |
-          <a href="#curriculum">Temario</a> |
-          <a href="#instructors">Instructores</a> |
-          <a href="contact.html">Contacto</a> |
-          <a href="cart.html">Inscripción</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <img src="img/logo.png" alt="Academia Código">
+          <span>Academia Código</span>
+        </a>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="index.html" data-page="index.html">Inicio</a>
+          <a href="products.html" data-page="products.html">Cursos</a>
+          <a href="about.html" data-page="about.html">Nosotros</a>
+          <a href="contact.html" data-page="contact.html">Contacto</a>
+          <a href="pages/help.html" data-page="help.html">Ayuda</a>
         </nav>
+        <div class="header-actions">
+          <button class="icon-btn theme-toggle" aria-label="Cambiar a modo oscuro">🌙</button>
+          <a class="icon-btn" href="cart.html" aria-label="Ver carrito">🛒<span class="cart-badge">0</span></a>
+          <a class="btn btn-primary btn-sm" href="products.html">Inscribirme</a>
+          <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
       </div>
     </header>
 
     <main>
       <section class="hero">
-        <img src="img/products/carta.png" alt="Banner del curso" style="max-width:100%;height:auto;">
-        <h1>Curso Full-Stack: De 0 a Despliegue</h1>
-        <p>Proyecto real, mentoría, y preparación para el mercado laboral en 12 semanas.</p>
-        <p><a href="cart.html">Reservar plaza</a></p>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Bootcamp online en vivo</span>
+            <h1>Curso Full-Stack: de cero a tu primer despliegue en producción</h1>
+            <p class="lead">Aprende HTML, CSS, JavaScript, Node.js, bases de datos y DevOps en 12 semanas, con mentoría 1:1, proyectos reales para tu portafolio y acompañamiento hasta conseguir empleo.</p>
+            <div class="badges">
+              <span>🎓 Certificado al finalizar</span>
+              <span>👩‍🏫 Mentoría individual</span>
+              <span>💼 Bolsa de empleo</span>
+              <span>🕒 100% en vivo + grabado</span>
+            </div>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="products.html">Ver cursos y precios</a>
+              <a class="btn btn-secondary" href="contact.html">Hablar con un asesor</a>
+            </div>
+            <p class="hero-note">Próxima cohorte: <strong>7 de septiembre</strong> · Cupos limitados a 25 estudiantes.</p>
+          </div>
+          <div class="hero-media reveal">
+            <img src="img/banner.jpg" alt="Estudiantes de Academia Código colaborando en un proyecto con sus laptops" width="640" height="420">
+            <div class="floating-card fc-1"><span class="dot"></span> <div><strong>4.9 / 5</strong>+800 reseñas</div></div>
+            <div class="floating-card fc-2">🎓 <div><strong>1,240+</strong>egresados</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-bar">
+        <div class="container stats-grid">
+          <div class="stat"><strong data-count="1240" data-suffix="+">0</strong><span>Egresados</span></div>
+          <div class="stat"><strong data-count="92" data-suffix="%">0</strong><span>Tasa de empleabilidad</span></div>
+          <div class="stat"><strong data-count="4.9">0</strong><span>Valoración promedio</span></div>
+          <div class="stat"><strong data-count="6">0</strong><span>Cursos disponibles</span></div>
+        </div>
       </section>
 
       <section id="overview">
-        <h2>Lo que incluye</h2>
-        <ul>
-          <li>Clases en vivo y material grabado.</li>
-          <li>Mentoría individual y revisión de proyectos.</li>
-          <li>Acceso a la comunidad y ofertas laborales.</li>
-        </ul>
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Lo que incluye</span>
+            <h2>Todo lo que necesitas para cambiar de carrera</h2>
+            <p>Un método probado que combina teoría, práctica y acompañamiento humano en cada paso.</p>
+          </div>
+          <div class="grid grid-4">
+            <div class="card feature-card reveal">
+              <div class="icon">🖥️</div>
+              <h3>Clases en vivo</h3>
+              <p>Sesiones interactivas con instructores activos en la industria, más material grabado para repasar a tu ritmo.</p>
+            </div>
+            <div class="card feature-card reveal">
+              <div class="icon">🤝</div>
+              <h3>Mentoría 1:1</h3>
+              <p>Revisión personalizada de código y de tu progreso cada semana con tu mentor asignado.</p>
+            </div>
+            <div class="card feature-card reveal">
+              <div class="icon">🚀</div>
+              <h3>Proyectos reales</h3>
+              <p>Construyes un portafolio de 5+ proyectos, incluido un proyecto final desplegado en producción.</p>
+            </div>
+            <div class="card feature-card reveal">
+              <div class="icon">💼</div>
+              <h3>Bolsa de empleo</h3>
+              <p>Preparación de CV, entrevistas técnicas simuladas y acceso a nuestra red de empresas aliadas.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section id="featured-courses">
-        <h2>Cursos y Módulos</h2>
-        <ul>
-          <li>Fundamentos de programación — práctico y orientado a proyectos.</li>
-          <li>Frontend moderno — HTML semántico y JavaScript.</li>
-          <li>Backend y APIs — Node.js y bases de datos.</li>
-        </ul>
-        <p><a href="products.html">Ver detalles del curso</a></p>
+      <section id="featured-courses" class="section-alt">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Cursos y módulos</span>
+            <h2>Elige tu ruta de aprendizaje</h2>
+            <p>Llévate el programa completo o especialízate por módulo, a tu ritmo y presupuesto.</p>
+          </div>
+          <div class="grid grid-3">
+            <article class="card course-card reveal">
+              <div class="thumb"><span class="level">Programa completo</span><img src="img/products/prod-fullstack.jpg" alt="Estudiantes trabajando en equipo durante el programa Full-Stack"></div>
+              <div class="body">
+                <h3>Full-Stack Completo</h3>
+                <p>Frontend, backend, bases de datos y despliegue en un solo programa de 12 semanas.</p>
+                <div class="meta"><span>⏱ 12 semanas</span><span>📶 Todos los niveles</span></div>
+                <div class="price-row"><span class="price">$899 <small>/ programa</small></span><a class="btn btn-primary btn-sm" href="products.html">Ver detalles</a></div>
+              </div>
+            </article>
+            <article class="card course-card reveal">
+              <div class="thumb"><span class="level">Módulo</span><img src="img/products/prod1.jpg" alt="Manos escribiendo código en un teclado de laptop"></div>
+              <div class="body">
+                <h3>Frontend Moderno</h3>
+                <p>HTML semántico, CSS avanzado y JavaScript para construir interfaces rápidas y accesibles.</p>
+                <div class="meta"><span>⏱ 4 semanas</span><span>📶 Principiante</span></div>
+                <div class="price-row"><span class="price">$349 <small>/ módulo</small></span><a class="btn btn-secondary btn-sm" href="products.html">Ver detalles</a></div>
+              </div>
+            </article>
+            <article class="card course-card reveal">
+              <div class="thumb"><span class="level">Módulo</span><img src="img/products/prod2.jpg" alt="Pantalla de laptop mostrando código de backend"></div>
+              <div class="body">
+                <h3>Backend & APIs</h3>
+                <p>Node.js, Express, bases de datos y diseño de APIs REST listas para producción.</p>
+                <div class="meta"><span>⏱ 4 semanas</span><span>📶 Intermedio</span></div>
+                <div class="price-row"><span class="price">$379 <small>/ módulo</small></span><a class="btn btn-secondary btn-sm" href="products.html">Ver detalles</a></div>
+              </div>
+            </article>
+          </div>
+          <p style="text-align:center;margin-top:36px;"><a class="btn btn-ghost" href="products.html">Ver los 6 cursos disponibles →</a></p>
+        </div>
       </section>
 
       <section id="curriculum">
-        <h2>Temario (resumen)</h2>
-        <ol>
-          <li>Semanas 1–4: Fundamentos y Frontend</li>
-          <li>Semanas 5–8: Backend y APIs</li>
-          <li>Semanas 9–12: DevOps y Proyecto Final</li>
-        </ol>
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Temario</span>
+            <h2>12 semanas, un plan claro</h2>
+            <p>Cada fase construye sobre la anterior, hasta llegar a tu proyecto final desplegado.</p>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item reveal">
+              <div class="marker">1</div>
+              <span class="tag">Semanas 1–4</span>
+              <h3>Fundamentos y Frontend</h3>
+              <p>Lógica de programación, HTML semántico, CSS moderno (Flexbox/Grid) y JavaScript esencial.</p>
+              <ul><li>Git y GitHub</li><li>Responsive design</li><li>DOM y eventos</li></ul>
+            </div>
+            <div class="timeline-item reveal">
+              <div class="marker">2</div>
+              <span class="tag">Semanas 5–8</span>
+              <h3>Backend y APIs</h3>
+              <p>Node.js, Express, bases de datos SQL/NoSQL y autenticación de usuarios.</p>
+              <ul><li>REST APIs</li><li>PostgreSQL</li><li>Autenticación JWT</li></ul>
+            </div>
+            <div class="timeline-item reveal">
+              <div class="marker">3</div>
+              <span class="tag">Semanas 9–11</span>
+              <h3>DevOps y Cloud</h3>
+              <p>Control de versiones avanzado, integración continua y despliegue en la nube.</p>
+              <ul><li>Docker</li><li>CI/CD</li><li>Despliegue en la nube</li></ul>
+            </div>
+            <div class="timeline-item reveal">
+              <div class="marker">4</div>
+              <span class="tag">Semana 12</span>
+              <h3>Proyecto final</h3>
+              <p>Desarrollas y despliegas una aplicación completa, con revisión de portafolio y simulacro de entrevista.</p>
+              <ul><li>Portafolio</li><li>Mock interview</li><li>Demo Day</li></ul>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section id="instructors">
-        <h2>Instructores</h2>
-        <img src="img/products/instructores.png" alt="Instructores del curso" style="max-width:100%;height:auto;">
-        <p>Ana López — Full-Stack Engineer</p>
-        <p>Juan Pérez — Arquitecto de Backend</p>
+      <section id="instructors" class="section-alt">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Instructores</span>
+            <h2>Aprende de quienes trabajan en la industria</h2>
+            <p>Nuestro equipo docente combina experiencia profesional activa con vocación de enseñanza.</p>
+          </div>
+          <div class="grid grid-4">
+            <div class="card team-card reveal">
+              <img src="img/team/instructor-ana.jpg" alt="Retrato de Ana López">
+              <h3>Ana López</h3>
+              <div class="role">Full-Stack Engineer</div>
+              <p class="bio">+8 años construyendo productos web. Especialista en React y arquitecturas frontend escalables.</p>
+              <div class="socials"><a href="#" aria-label="LinkedIn de Ana López">in</a><a href="#" aria-label="GitHub de Ana López">gh</a></div>
+            </div>
+            <div class="card team-card reveal">
+              <img src="img/team/instructor-juan.jpg" alt="Retrato de Juan Pérez">
+              <h3>Juan Pérez</h3>
+              <div class="role">Arquitecto de Backend</div>
+              <p class="bio">Diseña sistemas distribuidos de alto tráfico. Apasionado por enseñar buenas prácticas de API.</p>
+              <div class="socials"><a href="#" aria-label="LinkedIn de Juan Pérez">in</a><a href="#" aria-label="GitHub de Juan Pérez">gh</a></div>
+            </div>
+            <div class="card team-card reveal">
+              <img src="img/team/instructor-carla.jpg" alt="Retrato de Carla Méndez">
+              <h3>Carla Méndez</h3>
+              <div class="role">UX/UI & Producto</div>
+              <p class="bio">Diseñadora de producto centrada en investigación de usuarios y sistemas de diseño.</p>
+              <div class="socials"><a href="#" aria-label="LinkedIn de Carla Méndez">in</a><a href="#" aria-label="GitHub de Carla Méndez">gh</a></div>
+            </div>
+            <div class="card team-card reveal">
+              <img src="img/team/instructor-diego.jpg" alt="Retrato de Diego Ramírez">
+              <h3>Diego Ramírez</h3>
+              <div class="role">Cloud & DevOps</div>
+              <p class="bio">Especialista en infraestructura cloud, contenedores y automatización de despliegues.</p>
+              <div class="socials"><a href="#" aria-label="LinkedIn de Diego Ramírez">in</a><a href="#" aria-label="GitHub de Diego Ramírez">gh</a></div>
+            </div>
+          </div>
+          <div class="culture-banner reveal">
+            <img src="img/team/culture.jpg" alt="Equipo de instructores colaborando en la oficina">
+            <div class="overlay"><p>Nuestros instructores siguen trabajando en proyectos reales para traer al aula lo último de la industria.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Testimonios</span>
+            <h2>Historias de quienes ya dieron el salto</h2>
+          </div>
+          <div class="testimonial-track">
+            <div class="card testimonial-card reveal">
+              <div class="stars">★★★★★</div>
+              <blockquote>"Nunca había programado antes. En 12 semanas construí mi primer proyecto y conseguí una entrevista antes de graduarme."</blockquote>
+              <div class="person"><img src="img/testimonials/t1.jpg" alt="María Fernanda Gómez"><div><strong>María Fernanda Gómez</strong><span>Frontend Developer</span></div></div>
+            </div>
+            <div class="card testimonial-card reveal">
+              <div class="stars">★★★★★</div>
+              <blockquote>"La mentoría 1:1 marcó la diferencia. Mi mentor revisaba mi código cada semana y eso aceleró muchísimo mi aprendizaje."</blockquote>
+              <div class="person"><img src="img/testimonials/t2.jpg" alt="Carlos Andrade"><div><strong>Carlos Andrade</strong><span>Backend Developer</span></div></div>
+            </div>
+            <div class="card testimonial-card reveal">
+              <div class="stars">★★★★★</div>
+              <blockquote>"Cambié de carrera a los 34 años. El acompañamiento de la bolsa de empleo fue clave para conseguir mi primer trabajo tech."</blockquote>
+              <div class="person"><img src="img/testimonials/t3.jpg" alt="Lucía Torres"><div><strong>Lucía Torres</strong><span>Full-Stack Developer</span></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-alt" id="faq">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Preguntas frecuentes</span>
+            <h2>Resolvemos tus dudas</h2>
+          </div>
+          <div class="accordion reveal">
+            <div class="accordion-item">
+              <button class="accordion-trigger">¿Necesito experiencia previa para empezar?<span class="plus">+</span></button>
+              <div class="accordion-panel"><div class="inner">No, el programa Full-Stack está diseñado para empezar desde cero. Solo necesitas ganas de aprender y disponibilidad para practicar.</div></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger">¿Las clases son en vivo o grabadas?<span class="plus">+</span></button>
+              <div class="accordion-panel"><div class="inner">Las clases son en vivo por videoconferencia y quedan grabadas, así que puedes repasarlas cuando quieras.</div></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger">¿Ofrecen facilidades de pago?<span class="plus">+</span></button>
+              <div class="accordion-panel"><div class="inner">Sí, puedes pagar el programa completo o en mensualidades. Revisa los planes en la página de cursos.</div></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger">¿Qué pasa si me atraso con una clase?<span class="plus">+</span></button>
+              <div class="accordion-panel"><div class="inner">Tienes acceso a todas las grabaciones y a tu mentor para ponerte al día sin perder el ritmo del grupo.</div></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger">¿Entregan certificado al finalizar?<span class="plus">+</span></button>
+              <div class="accordion-panel"><div class="inner">Sí, recibes un certificado digital verificable al completar el programa y tu proyecto final.</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="cta-banner reveal">
+            <div>
+              <h2>La próxima cohorte inicia el 7 de septiembre</h2>
+              <p>Cupos limitados a 25 estudiantes por grupo para garantizar mentoría de calidad. Reserva tu lugar hoy.</p>
+              <div class="countdown" data-target="2026-09-07T09:00:00">
+                <div class="unit"><strong class="c-days">00</strong><span>Días</span></div>
+                <div class="unit"><strong class="c-hours">00</strong><span>Horas</span></div>
+                <div class="unit"><strong class="c-mins">00</strong><span>Min</span></div>
+                <div class="unit"><strong class="c-secs">00</strong><span>Seg</span></div>
+              </div>
+              <div class="hero-cta" style="margin-top:26px;"><a class="btn btn-accent" href="products.html">Reservar plaza</a></div>
+            </div>
+            <form class="newsletter-form">
+              <label class="field" style="width:100%;">
+                <span style="color:#fff;font-size:.85rem;font-weight:600;">Recibe becas y novedades por correo</span>
+                <input type="email" placeholder="tu@correo.com" required style="margin-top:8px;">
+              </label>
+              <button class="btn" type="submit">Suscribirme</button>
+            </form>
+          </div>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <nav>
-        <a href="pages/terms.html">Términos</a> |
-        <a href="pages/privacy.html">Privacidad</a> |
-        <a href="pages/help.html">Ayuda</a>
-      </nav>
-      <p>&copy; 2026 Academia Código</p>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-brand"><img src="img/logo.png" alt="Academia Código"><span>Academia Código</span></div>
+            <p class="desc">Formamos desarrolladores Full-Stack con mentoría real, proyectos prácticos y acompañamiento hasta conseguir empleo.</p>
+            <div class="footer-socials">
+              <a href="#" aria-label="Facebook">f</a>
+              <a href="#" aria-label="Instagram">ig</a>
+              <a href="#" aria-label="LinkedIn">in</a>
+              <a href="#" aria-label="YouTube">yt</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Cursos</h4>
+            <ul>
+              <li><a href="products.html">Full-Stack Completo</a></li>
+              <li><a href="products.html">Frontend Moderno</a></li>
+              <li><a href="products.html">Backend & APIs</a></li>
+              <li><a href="products.html">Cloud & DevOps</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Academia</h4>
+            <ul>
+              <li><a href="about.html">Nosotros</a></li>
+              <li><a href="index.html#instructors">Instructores</a></li>
+              <li><a href="contact.html">Contacto</a></li>
+              <li><a href="cart.html">Inscripción</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="pages/terms.html">Términos</a></li>
+              <li><a href="pages/privacy.html">Privacidad</a></li>
+              <li><a href="pages/help.html">Ayuda</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; <span class="year">2026</span> Academia Código. Todos los derechos reservados.</span>
+          <span>Hecho con ❤️ para futuros desarrolladores.</span>
+        </div>
+      </div>
     </footer>
 
+    <button class="back-to-top" aria-label="Volver arriba">↑</button>
     <script src="js/main.js"></script>
   </body>
 </html>

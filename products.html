@@ -3,21 +3,257 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Curso — Academia Código</title>
+    <title>Cursos y precios — Academia Código</title>
+    <meta name="description" content="Programa Full-Stack completo o módulos individuales: Frontend, Backend, Cloud & DevOps, Data Analytics y UX/UI. Elige tu plan y empieza hoy.">
+    <link rel="icon" href="img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <header><a href="index.html">Inicio</a></header>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <img src="img/logo.png" alt="Academia Código">
+          <span>Academia Código</span>
+        </a>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="index.html" data-page="index.html">Inicio</a>
+          <a href="products.html" data-page="products.html">Cursos</a>
+          <a href="about.html" data-page="about.html">Nosotros</a>
+          <a href="contact.html" data-page="contact.html">Contacto</a>
+          <a href="pages/help.html" data-page="help.html">Ayuda</a>
+        </nav>
+        <div class="header-actions">
+          <button class="icon-btn theme-toggle" aria-label="Cambiar a modo oscuro">🌙</button>
+          <a class="icon-btn" href="cart.html" aria-label="Ver carrito">🛒<span class="cart-badge">0</span></a>
+          <a class="btn btn-primary btn-sm" href="#planes">Inscribirme</a>
+          <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+
     <main>
-      <h1>Curso Full-Stack</h1>
-      <p>Duración: 12 semanas. Modalidad: híbrida (clases en vivo + material grabado).</p>
-      <h2>Módulos</h2>
-      <ul>
-        <li>Fundamentos y lógica de programación</li>
-        <li>Frontend moderno (HTML, CSS, JavaScript)</li>
-        <li>Backend y APIs (Node.js, Express)</li>
-      </ul>
-      <p><a href="cart.html">Reservar plaza / Inscribirse</a></p>
+      <div class="container">
+        <p class="breadcrumb" style="padding-top:20px;"><a href="index.html">Inicio</a> / Cursos</p>
+      </div>
+
+      <section class="page-header">
+        <div class="container">
+          <span class="eyebrow">Catálogo</span>
+          <h1>Cursos y módulos</h1>
+          <p class="lead">Llévate el programa Full-Stack completo o arma tu propia ruta eligiendo módulos individuales. Todos incluyen mentoría, proyectos reales y certificado.</p>
+        </div>
+      </section>
+
+      <section style="padding-top:0;">
+        <div class="container">
+          <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="programa">Programa completo</button>
+            <button class="filter-btn" data-filter="modulo">Módulos</button>
+          </div>
+
+          <div class="grid grid-3">
+            <article class="card course-card reveal" data-category="programa">
+              <div class="thumb"><span class="level">Programa completo</span><img src="img/products/prod-fullstack.jpg" alt="Estudiantes trabajando en equipo durante el programa Full-Stack"></div>
+              <div class="body">
+                <h3>Full-Stack Completo</h3>
+                <p>Frontend, backend, bases de datos, DevOps y proyecto final. La ruta más completa para conseguir tu primer empleo tech.</p>
+                <div class="meta"><span>⏱ 12 semanas</span><span>📶 Todos los niveles</span></div>
+                <div class="price-row">
+                  <span class="price">$899 <small>/ programa</small></span>
+                  <button class="btn btn-primary btn-sm" data-add-to-cart="fullstack">Añadir</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card course-card reveal" data-category="modulo">
+              <div class="thumb"><span class="level">Módulo</span><img src="img/products/prod1.jpg" alt="Manos escribiendo código en un teclado de laptop"></div>
+              <div class="body">
+                <h3>Frontend Moderno</h3>
+                <p>HTML semántico, CSS avanzado (Flexbox/Grid) y JavaScript para construir interfaces rápidas y accesibles.</p>
+                <div class="meta"><span>⏱ 4 semanas</span><span>📶 Principiante</span></div>
+                <div class="price-row">
+                  <span class="price">$349 <small>/ módulo</small></span>
+                  <button class="btn btn-secondary btn-sm" data-add-to-cart="frontend">Añadir</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card course-card reveal" data-category="modulo">
+              <div class="thumb"><span class="level">Módulo</span><img src="img/products/prod2.jpg" alt="Pantalla de laptop mostrando código de backend"></div>
+              <div class="body">
+                <h3>Backend & APIs</h3>
+                <p>Node.js, Express, bases de datos SQL/NoSQL y diseño de APIs REST listas para producción.</p>
+                <div class="meta"><span>⏱ 4 semanas</span><span>📶 Intermedio</span></div>
+                <div class="price-row">
+                  <span class="price">$379 <small>/ módulo</small></span>
+                  <button class="btn btn-secondary btn-sm" data-add-to-cart="backend">Añadir</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card course-card reveal" data-category="modulo">
+              <div class="thumb"><span class="level">Módulo</span><img src="img/products/prod3.jpg" alt="Especialista revisando infraestructura en un centro de datos"></div>
+              <div class="body">
+                <h3>Cloud & DevOps</h3>
+                <p>Docker, integración continua y despliegue de aplicaciones en la nube con buenas prácticas de producción.</p>
+                <div class="meta"><span>⏱ 3 semanas</span><span>📶 Intermedio</span></div>
+                <div class="price-row">
+                  <span class="price">$329 <small>/ módulo</small></span>
+                  <button class="btn btn-secondary btn-sm" data-add-to-cart="devops">Añadir</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card course-card reveal" data-category="modulo">
+              <div class="thumb"><span class="level">Módulo</span><img src="img/products/prod4.jpg" alt="Panel de analítica de datos con gráficos en pantalla"></div>
+              <div class="body">
+                <h3>Data Analytics</h3>
+                <p>Análisis y visualización de datos con SQL, hojas de cálculo avanzadas y dashboards interactivos.</p>
+                <div class="meta"><span>⏱ 4 semanas</span><span>📶 Principiante</span></div>
+                <div class="price-row">
+                  <span class="price">$359 <small>/ módulo</small></span>
+                  <button class="btn btn-secondary btn-sm" data-add-to-cart="data">Añadir</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card course-card reveal" data-category="modulo">
+              <div class="thumb"><span class="level">Módulo</span><img src="img/products/prod5.jpg" alt="Persona diseñando pantallas de una app móvil en laptop y teléfono"></div>
+              <div class="body">
+                <h3>UX/UI Design</h3>
+                <p>Investigación de usuarios, prototipado y sistemas de diseño para crear productos digitales usables.</p>
+                <div class="meta"><span>⏱ 3 semanas</span><span>📶 Principiante</span></div>
+                <div class="price-row">
+                  <span class="price">$319 <small>/ módulo</small></span>
+                  <button class="btn btn-secondary btn-sm" data-add-to-cart="uxui">Añadir</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="planes" class="section-alt">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Planes de pago</span>
+            <h2>Elige cómo pagar el programa completo</h2>
+            <p>Todos los planes incluyen las mismas clases, mentoría y certificado.</p>
+          </div>
+          <div class="pricing-grid">
+            <div class="card price-card reveal">
+              <h3>Mensual</h3>
+              <p>Divide tu inversión en cuotas cómodas durante el programa.</p>
+              <div class="amount">$85<span>/mes × 12</span></div>
+              <ul>
+                <li>Acceso a las 12 semanas de clases</li>
+                <li>Mentoría grupal semanal</li>
+                <li>Certificado digital</li>
+                <li>Acceso a la comunidad</li>
+              </ul>
+              <button class="btn btn-secondary btn-block" data-add-to-cart="fullstack">Elegir plan mensual</button>
+            </div>
+            <div class="card price-card featured reveal">
+              <h3>Pago único</h3>
+              <p>Ahorra pagando el programa completo por adelantado.</p>
+              <div class="amount">$899<span>pago único</span></div>
+              <ul>
+                <li>Todo lo del plan mensual</li>
+                <li>Mentoría individual 1:1</li>
+                <li>Revisión de portafolio y CV</li>
+                <li>2 simulacros de entrevista técnica</li>
+              </ul>
+              <button class="btn btn-primary btn-block" data-add-to-cart="fullstack">Elegir pago único</button>
+            </div>
+            <div class="card price-card reveal">
+              <h3>Becas y empresas</h3>
+              <p>Descuentos para grupos, empresas y perfiles con beca social.</p>
+              <div class="amount">A medida</div>
+              <ul>
+                <li>Descuentos por volumen</li>
+                <li>Facturación empresarial</li>
+                <li>Rutas de aprendizaje a medida</li>
+                <li>Seguimiento de progreso del equipo</li>
+              </ul>
+              <a class="btn btn-secondary btn-block" href="contact.html">Hablar con ventas</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container two-col">
+          <div class="reveal">
+            <span class="eyebrow">Temario detallado</span>
+            <h2>Descarga el syllabus completo</h2>
+            <p>Consulta semana a semana qué vas a aprender, las tecnologías que vas a usar y los proyectos que vas a construir.</p>
+            <ul class="check-list">
+              <li>Objetivos de aprendizaje por semana</li>
+              <li>Herramientas y tecnologías utilizadas</li>
+              <li>Criterios de evaluación de proyectos</li>
+            </ul>
+            <div class="hero-cta" style="margin-top:24px;">
+              <a class="btn btn-primary" href="img/products/carta.png" target="_blank" rel="noopener">Ver temario</a>
+              <a class="btn btn-secondary" href="contact.html">Tengo preguntas</a>
+            </div>
+          </div>
+          <img class="reveal" src="img/products/carta.png" alt="Vista previa del temario del curso Full-Stack" style="height:auto;max-height:460px;">
+        </div>
+      </section>
     </main>
-    <footer><a href="index.html">Volver</a></footer>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-brand"><img src="img/logo.png" alt="Academia Código"><span>Academia Código</span></div>
+            <p class="desc">Formamos desarrolladores Full-Stack con mentoría real, proyectos prácticos y acompañamiento hasta conseguir empleo.</p>
+            <div class="footer-socials">
+              <a href="#" aria-label="Facebook">f</a>
+              <a href="#" aria-label="Instagram">ig</a>
+              <a href="#" aria-label="LinkedIn">in</a>
+              <a href="#" aria-label="YouTube">yt</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Cursos</h4>
+            <ul>
+              <li><a href="products.html">Full-Stack Completo</a></li>
+              <li><a href="products.html">Frontend Moderno</a></li>
+              <li><a href="products.html">Backend & APIs</a></li>
+              <li><a href="products.html">Cloud & DevOps</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Academia</h4>
+            <ul>
+              <li><a href="about.html">Nosotros</a></li>
+              <li><a href="index.html#instructors">Instructores</a></li>
+              <li><a href="contact.html">Contacto</a></li>
+              <li><a href="cart.html">Inscripción</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="pages/terms.html">Términos</a></li>
+              <li><a href="pages/privacy.html">Privacidad</a></li>
+              <li><a href="pages/help.html">Ayuda</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; <span class="year">2026</span> Academia Código. Todos los derechos reservados.</span>
+          <span>Hecho con ❤️ para futuros desarrolladores.</span>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Volver arriba">↑</button>
+    <script src="js/main.js"></script>
   </body>
 </html>
