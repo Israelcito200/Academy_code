@@ -1,4 +1,4 @@
-name: Build and deploy Node.js app to Azure Web App - AcademyCodeWeb
+name: Deploy AcademyCodeWeb to Azure
 
 on:
   push:
@@ -14,22 +14,18 @@ jobs:
       contents: read
 
     steps:
-      - name: Checkout del código
+      - name: Descargar código
         uses: actions/checkout@v4
 
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '24.x'
-          cache: 'npm'
 
       - name: Instalar dependencias
         run: npm install
 
-      - name: Verificar proyecto
-        run: npm run build --if-present
-
-      - name: Preparar archivos para Azure
+      - name: Preparar archivos
         uses: actions/upload-artifact@v4
         with:
           name: node-app
@@ -57,7 +53,6 @@ jobs:
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_1B5A0BB8BA3F4A9988AECB9A9953215C }}
 
       - name: Desplegar en Azure Web App
-        id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'AcademyCodeWeb'
