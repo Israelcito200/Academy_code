@@ -1,7 +1,4 @@
-# Workflow para desplegar sitio estático en Azure Web App
-# Usa Node.js 24.x en Windows (configurado en Azure), pero no ejecuta npm
-
-name: Deploy static site to Azure Web App - WebAppacademia
+name: Deploy Node site to Azure Web App - WebAppacademia
 
 on:
   push:
@@ -19,15 +16,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # No npm install porque no hay package.json
-      - name: Prepare static files
-        run: echo "Archivos listos para despliegue"
+      - name: Install dependencies
+        run: npm install   # <-- instala express y demás
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
-          name: static-site
-          path: .
+          name: node-site
+          path: .   # raíz del repo
 
   deploy:
     runs-on: ubuntu-latest
@@ -40,7 +36,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: static-site
+          name: node-site
       
       - name: Login to Azure
         uses: azure/login@v2
