@@ -9,7 +9,7 @@ Desarrollado **exclusivamente con HTML5 y CSS3**, sin JavaScript, frameworks, Wo
 - **Nombre:** Academia Código
 - **Rubro:** Institución educativa (escuela online de tecnología)
 - **Eslogan:** "Fórmate como profesional Tech, sin salir de casa"
-- **Propuesta de valor:** más de 40 cursos con mentoría real, proyectos prácticos y acompañamiento hasta conseguir empleo.
+- **Propuesta de valor:** 15 cursos con mentoría real, proyectos prácticos y acompañamiento hasta conseguir empleo.
 
 ## Estructura del proyecto
 
@@ -17,7 +17,7 @@ Desarrollado **exclusivamente con HTML5 y CSS3**, sin JavaScript, frameworks, Wo
 LandingPage/
 ├── index.html          # Página de inicio
 ├── nosotros.html        # Historia, misión, visión, valores y equipo
-├── servicios.html        # Catálogo de 40 cursos organizados por categoría
+├── servicios.html        # Catálogo de 15 cursos organizados por categoría
 ├── contacto.html          # Dirección, teléfono, correo, horarios, formulario y mapa
 ├── web.config              # Configuración de IIS/Azure App Service (documento por defecto)
 ├── assets/
