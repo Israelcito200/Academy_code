@@ -14,7 +14,7 @@ Desarrollado **exclusivamente con HTML5 y CSS3**, sin JavaScript, frameworks, Wo
 ## Estructura del proyecto
 
 ```
-LandingPage/
+web Academy/
 ├── index.html          # Página de inicio
 ├── nosotros.html        # Historia, misión, visión, valores y equipo
 ├── servicios.html        # Catálogo de 15 cursos organizados por categoría
@@ -38,18 +38,4 @@ Las imágenes de cada curso, el banner y la foto de equipo se descargaron de Int
 - Enlaces correctos entre las cuatro páginas y el pie de página.
 - Formulario de contacto únicamente visual (sin backend ni JavaScript).
 
-## Despliegue en Azure App Service
 
-1. Sube este repositorio a GitHub (rama `main`).
-2. En el [Azure Portal](https://portal.azure.com), crea un recurso **App Service (Web App)**:
-   - Publicar: **Código**.
-   - Pila en tiempo de ejecución: cualquiera que sirva HTML estático (por ejemplo, .NET o Node.js; no se ejecuta código de servidor).
-   - Sistema operativo: Windows o Linux, según preferencia del grupo.
-3. En el recurso creado, entra a **Centro de implementación (Deployment Center)** y selecciona **GitHub** como origen.
-4. Autoriza el acceso, elige la organización, el repositorio y la rama `main`.
-5. Azure generará automáticamente un flujo de trabajo de GitHub Actions en `.github/workflows/` que compilará y desplegará el sitio en cada `push`.
-6. Verifica el sitio publicado en la URL pública que Azure asigna al Web App (`https://<nombre-app>.azurewebsites.net`).
-
-## Empresa y contenido
-
-El contenido (historia, equipo, cursos y datos de contacto) es ficticio y fue creado con fines académicos para esta actividad.
